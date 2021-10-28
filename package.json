@@ -5,7 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "start": "npm run serve && node server.js"
+    "start": "concurrently --kill-others \"node server.js\" \"npm run serve\""
   },
   "dependencies": {
     "autoprefixer": "^9.8.8",
@@ -38,6 +38,7 @@
     "@vue/cli-service": "~4.5.0",
     "@vue/compiler-sfc": "^3.0.0",
     "babel-loader": "^8.2.3",
+    "concurrently": "^6.3.0",
     "webpack": "^4.46.0"
   },
   "browserslist": [
